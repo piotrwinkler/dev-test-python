@@ -9,5 +9,13 @@ def test_localize_entrance_and_exit():
     MazeAnalyzer.localize_entrance_and_exit(numpy_array)
 
 
+def test_analyze_mazes():
+    print("Enter picture path: ")
+    picture_path = input()
+    analyzer = MazeAnalyzer(picture_path)
+    analyzer.analyze_mazes()
+
+
 if __name__ == "__main__":
-    test_localize_entrance_and_exit()
+    # test_localize_entrance_and_exit()
+    test_analyze_mazes()

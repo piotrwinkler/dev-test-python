@@ -4,14 +4,15 @@ from pathfinder.maze_analyzer.a_star import AStar
 
 
 def test_find_path():
-    maze = np.array([[0, 1, 0, 0],
-                     [0, 1, 0, 0],
-                     [0, 1, 1, 0],
-                     [0, 0, 1, 0],
-                     [0, 0, 1, 0]])
+    RGB_WHITE = 1
+    maze = np.array([[0, 1, 0, 1],
+                     [0, 1, 0, 1],
+                     [0, 1, 0, 1],
+                     [0, 1, 0, 1],
+                     [0, 1, 1, 1]])
     entrance = (0, 1)
-    exit_ = (4, 2)
-    a_star = AStar(maze, entrance, exit_)
+    exit_ = (0, 3)
+    a_star = AStar(maze, entrance, exit_, RGB_WHITE)
     a_star.find_path()
 
 
